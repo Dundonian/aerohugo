@@ -1,0 +1,15 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  pre:
+  	- docker pull aerobatic/hugo
+
+deployment:
+  master:
+    branch: master
+    commands:
+    	- cd themes; git clone https://github.com/comfusion/after-dark
+    	- hugo --theme=after-dark --baseURL https://__baseurl__ --buildDrafts
+    	- aero deploy -d public
