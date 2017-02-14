@@ -4,7 +4,8 @@ machine:
 
 dependencies:
   pre:
-    - docker pull aerobatic/hugo
+    - wget https://github.com/spf13/hugo/releases/download/v0.18/hugo_0.18-64bit.deb
+    - dpkg -i hugo*.deb
 
 deployment:
   master:
