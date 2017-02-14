@@ -1,6 +1,7 @@
 dependencies:
   pre:
     - wget https://github.com/spf13/hugo/releases/download/v0.18/hugo_0.18-64bit.deb
+    - sudo dpkg -i hugo*.deb
     - npm install -g aerobatic-cli
 
 deployment:
