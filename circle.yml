@@ -4,13 +4,13 @@ machine:
 
 dependencies:
   pre:
-  	- docker pull aerobatic/hugo
-  	- docker build aerobatic/hugo
+    - docker pull aerobatic/hugo
+    - docker build aerobatic/hugo
 
 deployment:
   master:
     branch: master
     commands:
-    	- cd themes; git clone https://github.com/comfusion/after-dark
-    	- hugo --theme=after-dark --baseURL https://__baseurl__ --buildDrafts
-    	- aero deploy -d public
+      - cd themes; git clone https://github.com/comfusion/after-dark
+      - hugo --theme=after-dark --baseURL https://__baseurl__ --buildDrafts
+      - aero deploy -d public
