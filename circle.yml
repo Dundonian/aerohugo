@@ -5,6 +5,7 @@ machine:
 dependencies:
   pre:
   	- docker pull aerobatic/hugo
+  	- docker build aerobatic/hugo
 
 deployment:
   master:
