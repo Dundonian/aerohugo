@@ -8,6 +8,6 @@ deployment:
   master:
     branch: master
     commands:
-      - git clone https://github.com/comfusion/after-dark themes/after-dark
-      - hugo --theme=after-dark --baseURL https://__baseurl__ --buildDrafts
+      - git clone https://github.com/rakuishi/hugo-zen.git themes/hugo-zen
+      - hugo --theme=hugo-zen --baseURL https://__baseurl__ --buildDrafts
       - aero deploy -d public
